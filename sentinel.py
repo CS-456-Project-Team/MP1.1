@@ -112,13 +112,6 @@ def random_crash():
     # Exits the process with an error code to simulate a crash
     os._exit(1)
 
-# Test function
-# print(check_ip("192.0.2.25"))
-# print(check_ip("203.0.113.10"))
-# print(check_request("192.0.2.25", "Possible malware detected"))
-# print(check_request("192.0.2.25", "Hello"))
-# print(check_request("203.0.113.10", "Hello"))
-
 if __name__ == "__main__":
     # Start the heartbeat thread
     heartbeat_thread = threading.Thread(target=send_heartbeat, daemon=True)
