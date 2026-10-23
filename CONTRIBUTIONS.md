@@ -3,6 +3,9 @@
 ## Contributions:
 **Victor Troncoso**: Implementation of the Critical Process with Simulated Failure. 
 * sentinel.py - Simulated firewall, periodic heartbeat sender, and random crash simulation.
+**Benjamin Mooneyham**:
+**Matthew Leman**:
+**Tyler Short**:
 
 Task 1: Team
     Benjamin Mooneyham: "Moonshammy"
