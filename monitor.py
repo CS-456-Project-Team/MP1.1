@@ -59,6 +59,4 @@ def receive_heartbeat():
         
         
 if __name__ == "__main__":
-    monitor_t = threading.Thread(target=receive_heartbeat)
-    monitor_t.start()
-    
+    receive_heartbeat()
