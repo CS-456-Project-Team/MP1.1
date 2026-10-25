@@ -7,7 +7,8 @@
 
 **Matthew Leman**:
 
-**Tyler Short**:
+**Tyler Short**: Implementation of adversary, attack 1
+* adversary.py
 
 
 Task 1: Team
