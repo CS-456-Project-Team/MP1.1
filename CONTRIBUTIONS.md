@@ -7,7 +7,8 @@
 
 **Matthew Leman**:
 
-**Tyler Short**:
+**Tyler Short**: Implementation of adversary, attack 1
+* adversary.py - Outside system, configurable, sends either a fake 'heartbeat' or a captured one to mimic heartbeat of victim
 
 
 Task 1: Team
