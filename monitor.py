@@ -8,10 +8,16 @@ HOST = '127.0.0.1'
 PORT = 5001
 TIMEOUT = 3 #Timeout duration in seconds for considering the service down
 
+logging.basicConfig(
+    filename="monitor.log",
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
+
 # Function to receive heartbeat messages from a service and monitor its status
 def receive_heartbeat():
     monitor = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    monitor.settimeout(3) #extended wait time for network latency
+    monitor.settimeout(1) #extended wait time for network latency
     # Bind the monitor socket to the specified host and port
     monitor.bind((HOST, PORT))
     last_heartbeat = None
@@ -34,10 +40,11 @@ def receive_heartbeat():
                     # Checks if the service was previously down and has now recovered
                     if service_down:
                         print(f"[{datetime.now()}] Sentinel recovered")
+                        logging.info("Sentinel recovered")
                         service_down = False
             # Handles socket timeout exceptions
             except socket.timeout:
-                logging.error(f"Heartbeat not received at {datetime.now()}")
+                pass
             
             # Checks whether the last heartbeat was too long ago
             if last_heartbeat is not None and not service_down:
@@ -45,6 +52,7 @@ def receive_heartbeat():
                 if time.monotonic() - last_heartbeat >= TIMEOUT:
 
                     print(f"[{datetime.now()}] ALERT: Sentinel is down!")
+                    logging.error("ALERT: Sentinel is down!")
                     # Marks the service as down
                     service_down = True
     
