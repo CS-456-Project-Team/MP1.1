@@ -13,7 +13,9 @@ Network Sentinel/Firewall Agent
 * monitor.py - Opened a channel to receive input from Sentinel. Acknowledged when a message received, made a log when a message was not received in a delayed from normal Sentinel heartbeats.
   
 **Matthew Leman "Philojyw"**:
-
+* Created video demo
+* monitor.py - updated logging logic, changed timeout and loss of service logic so the two aren't synonymous.
+  
 **Tyler Short "Tsyber"**: Implementation of adversary, attack 1.
 * adversary.py - Outside system, configurable, sends either a fake 'heartbeat' or a captured one to mimic heartbeat of victim
 
