@@ -24,7 +24,7 @@ Start the Monitor and Sentinel as described above.
 
 **Terminal 3 - Start the Attacker**
 ```powershell
-python .\attacker.py spoof
+python .\adversary.py spoof
 ```
 
 The attacker sends fake heartbeats to prevent the monitor from detecting the Sentinel's crash.
@@ -37,7 +37,7 @@ For this test, start the programs in the following order:
 
 **Terminal 1 - Start Replay Capture**
 ```powershell
-python .\attacker.py replay
+python .\adversary.py replay
 ```
 
 **Terminal 2 - Start the Sentinel**
