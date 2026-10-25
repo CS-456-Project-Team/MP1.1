@@ -10,7 +10,8 @@ Network Sentinel/Firewall Agent
 * adversary.py - External script that captures a legitimate heartbeat from the Sentinel and repeatedly replays it to trick the monitor into believing the Sentinel is still running, even after it crashes.
   
 **Benjamin Mooneyham "Moonshammy"**:
-
+* monitor.py - Opened a channel to receive input from Sentinel. Acknowledged when a message received, made a log when a message was not received in a delayed from normal Sentinel heartbeats.
+  
 **Matthew Leman "Philojyw"**:
 
 **Tyler Short "Tsyber"**: Implementation of adversary, attack 1.
