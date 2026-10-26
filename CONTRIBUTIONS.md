@@ -8,6 +8,7 @@ Network Sentinel/Firewall Agent
 **Victor Troncoso "troncosv"**: Implementation of the Critical Process with Simulated Failure and adversary attack 2. 
 * sentinel.py - Simulated firewall, periodic heartbeat sender, and random crash simulation.
 * adversary.py - External script that captures a legitimate heartbeat from the Sentinel and repeatedly replays it to trick the monitor into believing the Sentinel is still running, even after it crashes.
+* Created and added content to README.md 
   
 **Benjamin Mooneyham "Moonshammy"**:
 * monitor.py - Opened a channel to receive input from Sentinel. Acknowledged when a message received, made a log when a message was not received in a delayed from normal Sentinel heartbeats.
