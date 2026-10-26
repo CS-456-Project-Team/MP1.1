@@ -15,6 +15,7 @@ Network Sentinel/Firewall Agent
 **Matthew Leman "Philojyw"**:
 * Created video demo
 * monitor.py - updated logging logic, changed timeout and loss of service logic so the two aren't synonymous.
+* Proof read and updated README.md
   
 **Tyler Short "Tsyber"**: Implementation of adversary, attack 1.
 * adversary.py - Outside system, configurable, sends either a fake 'heartbeat' or a captured one to mimic heartbeat of victim
